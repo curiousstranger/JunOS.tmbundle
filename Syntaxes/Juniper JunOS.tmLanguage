@@ -19,6 +19,35 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>begin</key>
+			<string>\{</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.block.begin.juniper-junos-config</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\}</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.block.end.juniper-junos-config</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.juniper-junos-config</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>\b(access|^access-profile|^accounting-options|^apply-groups|^chassis|^class-of-service|^demux|^diameter|^ethernet-switching-options|^event-options|^firewall|^forwarding-options|^groups|^interfaces|^jsrc|^jsrc-partition|^poe|^policy-options|^protocols|^routing-instances|^routing-options|^security|^services|^snmp|^system|^virtual-chassis|^vlans|redundancy|aggregated-devices|network-services)\b</string>
 			<key>name</key>
