@@ -4,6 +4,12 @@
 <dict>
 	<key>name</key>
 	<string>JunOS</string>
+	<key>ordering</key>
+	<array>
+		<string>4AF2B712-51B4-47FB-9F89-27587C2F4A31</string>
+		<string>D8A26920-EF82-4479-A7FB-E1CBF5A978C5</string>
+		<string>1943A2EF-5CC4-4C40-9C92-61302FDEB14B</string>
+	</array>
 	<key>uuid</key>
 	<string>8BA60D1F-79D9-4ECD-A59B-3485E506D499</string>
 </dict>

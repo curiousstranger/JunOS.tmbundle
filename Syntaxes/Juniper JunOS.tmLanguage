@@ -7,7 +7,7 @@
 		<string>junos</string>
 	</array>
 	<key>firstLineMatch</key>
-	<string>(^## Last commit|^version |system {)</string>
+	<string>(^## Last commit|^## Last changed|^version |system {|groups{)</string>
 	<key>foldingStartMarker</key>
 	<string>/\*\*|\{\s*$</string>
 	<key>foldingStopMarker</key>
@@ -20,7 +20,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\b(access|^access-profile|^accounting-options|^apply-groups|^chassis|^class-of-service|^demux|^diameter|^ethernet-switching-options|^event-options|^firewall|^forwarding-options|^groups|^interfaces|^jsrc|^jsrc-partition|^poe|^policy-options|^protocols|^routing-instances|^routing-options|^security|^services|^snmp|^system|^virtual-chassis|^vlans)</string>
+			<string>\b(access|^access-profile|^accounting-options|^apply-groups|^chassis|^class-of-service|^demux|^diameter|^ethernet-switching-options|^event-options|^firewall|^forwarding-options|^groups|^interfaces|^jsrc|^jsrc-partition|^poe|^policy-options|^protocols|^routing-instances|^routing-options|^security|^services|^snmp|^system|^virtual-chassis|^vlans|redundancy|aggregated-devices|network-services)\b</string>
 			<key>name</key>
 			<string>constant.language.juniper</string>
 		</dict>
@@ -50,13 +50,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(at-|fe-|ge-|xe-|se-|so-|ae-|(lo|fxp)[0-9](.[0-9]{1,4})|t1-|es-|gr-|mo-|mt-|sp-|vlan(.[0-9]{1,4}))|[0-9]{1,2}/[0-9]{1,2}/[0-9]{1,2}</string>
+			<string>(at-|fe-|ge-|xe-|se-|so-|(lo|fxp|ae)[0-9](.[0-9]{0,4})|t1-|es-|gr-|mo-|mt-|sp-|(vlan|irb)(.[0-9]{1,4}))|[0-9]{1,2}/[0-9]{1,2}/[0-9]{1,2}</string>
 			<key>name</key>
 			<string>support.type.interface.juniper</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>##.*$</string>
+			<string>#.*$</string>
 			<key>name</key>
 			<string>comment.line.number-sign.juniper</string>
 		</dict>
@@ -65,6 +65,14 @@
 			<string>\bdescription\b</string>
 			<key>name</key>
 			<string>comment.line.description.juniper</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.juniper</string>
 		</dict>
 		<dict>
 			<key>begin</key>
